@@ -1,0 +1,1 @@
+# moment moment().format('YYYY-MM-DD HH:mm:ss') //当前时间转化为 年月日 时分秒格式
