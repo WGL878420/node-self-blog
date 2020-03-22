@@ -25,7 +25,7 @@ app.all('*', (req, res, next) => {
 app.use(bodyParser.json());
 
 // app.use('/api', router);
-app.use('api/user/login',async function(req,res){
+app.use('/api/login',async function(req,res){
    res.send('登录成功')
 })
 
