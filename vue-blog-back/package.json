@@ -7,8 +7,8 @@
     },
     "scripts": {
         "dev": "vue-cli-service serve",
-        "build": "vue-cli-service build",
-        "prod-build": "vue-cli-service build --mode production",
+        "dev-build": "vue-cli-service build",
+        "build": "vue-cli-service build --mode production",
         "test:unit": "vue-cli-service test:unit"
     },
     "dependencies": {
