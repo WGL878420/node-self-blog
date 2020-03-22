@@ -4,11 +4,7 @@ const app = express();
 const bodyParser = require('body-parser');
 const router = require('./router/index');
 const path = require('path');
-<<<<<<< HEAD
 //const db = require('./mongodb/db');
-=======
-//``const db = require('./mongodb/db');
->>>>>>> fd62227b9d6be09fc485c024853dc3ad99813bb2
 app.set('secret', 'i2u34y12oi3u4y8')//这是token加密的key（密钥）
 // app.use(cors());//解决跨域
 app.all('*', (req, res, next) => {
@@ -73,19 +69,11 @@ app.use('/images', express.static(__dirname + '/images')) //可以通过路由 /
 // }
 // scheduleCronstyle();
 // let jjData = require('./timingtask/jjData')
-<<<<<<< HEAD
 //let sendEmail = require('./sendEmail/sendEmailToGirlFriend');
 //schedule.scheduleJob('30 25 8 * * MON,TUE,WED,THU,FRI', function () {
  //   console.log("执行任务");
 //    sendEmail();
 //});
-=======
-// let sendEmail = require('./sendEmail/sendEmailToGirlFriend');
-// schedule.scheduleJob('30 25 8 * * MON,TUE,WED,THU,FRI', function () {
-//     console.log("执行任务");
-//     sendEmail();
-// });
->>>>>>> fd62227b9d6be09fc485c024853dc3ad99813bb2
 app.listen(8080,() => { 
     console.log(`监听8080端口`)
 })
