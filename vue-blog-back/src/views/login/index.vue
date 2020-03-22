@@ -53,12 +53,12 @@
                 style="width:100%;margin-bottom:30px;"
                 @click.native.prevent="handleLogin"
             >Login</el-button>
-            <!-- <el-button
+            <el-button
                 :loading="loading"
                 type="primary"
                 style="width:100%;margin-bottom:30px;"
                 @click.native.prevent="register"
-            >注册</el-button> -->
+            >注册</el-button>
         </el-form>
     </div>
 </template>
@@ -122,6 +122,7 @@ export default {
     methods: {
         async register() {
             let res = await register(this.loginForm);
+            console.log('注册成功')
         },
         showPwd() {
             if (this.passwordType === 'password') {
