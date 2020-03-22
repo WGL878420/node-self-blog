@@ -8,7 +8,7 @@
 const mongoose = require('mongoose');
 const chalk = require('chalk')
 mongoose.set('useCreateIndex', true)
-mongoose.connect('mongodb://127.0.0.1:27017/blog', { useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect('mongodb://0.0.0.0:27017/blog', { useNewUrlParser: true, useUnifiedTopology: true});
 mongoose.Promise = global.Promise;
 
 const db = mongoose.connection;
@@ -21,7 +21,7 @@ db.once('open', () => {
 
 db.on('error', function (error) {
     console.error(
-        chalk.red('Error in MongoDb connection: ' + error)
+        chalk.red('数据库连接错误: ' + error)
     );
     mongoose.disconnect();
 });

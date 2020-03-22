@@ -4,7 +4,7 @@ const app = express();
 const bodyParser = require('body-parser');
 const router = require('./router/index');
 const path = require('path');
-//const db = require('./mongodb/db');
+const db = require('./mongodb/db');
 app.set('secret', 'i2u34y12oi3u4y8')//这是token加密的key（密钥）
 // app.use(cors());//解决跨域
 app.all('*', (req, res, next) => {
@@ -24,10 +24,10 @@ app.all('*', (req, res, next) => {
 
 app.use(bodyParser.json());
 
-// app.use('/api', router);
-app.use('/api/login',async function(req,res){
-   res.send('登录成功')
-})
+app.use('/api', router);
+// app.use('/api/login',async function(req,res){
+//    res.send('登录成功')
+// })
 
 app.use('/', express.static(__dirname + '/admin'))
 app.use('/images', express.static(__dirname + '/images')) //可以通过路由 /images来访问静态文件夹的内容
